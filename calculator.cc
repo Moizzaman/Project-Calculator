@@ -6,7 +6,7 @@ int main()
     int choice;
     double num1, num2;
 
-    cout << "====== Calculator ======" << endl;
+  do {  cout << "====== Calculator ======" << endl;
     cout << "which operation do you want to perform?" << endl;
     cout << "1. Addition" << endl;
     cout << "2. Subtraction" << endl;
@@ -14,6 +14,7 @@ int main()
     cout << "4. Division" << endl;
     cout << "5. Profit loss calculation" << endl;
     cout << "6. Profit loss percentage calculation" << endl;
+    cout << "Exit (7)" << endl;
     cin >> choice;
     switch (choice)
     {
@@ -68,9 +69,12 @@ int main()
             cout << "No profit, no loss." << endl;
         }
         break;
+    case 7:
+        cout << "Exiting..." << endl;
+        break;
     default:
         cout << "Invalid choice!" << endl;
     }
-
+  }while (choice!=7);
     return 0;
 }
